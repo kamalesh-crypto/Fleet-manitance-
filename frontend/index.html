@@ -1,0 +1,76 @@
+
+### 2. Frontend — `frontend/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fleet Maintenance</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Fleet Maintenance</h1>
+    <p>Vehicle maintenance management system</p>
+</header>
+
+<main>
+
+    <section class="dashboard">
+
+        <div class="card">
+            <h3>Total Vehicles</h3>
+            <p id="vehicleCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Job Orders</h3>
+            <p id="jobCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Spare Parts</h3>
+            <p id="partCount">0</p>
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <div class="panel-header">
+            <h2>Vehicle List</h2>
+
+            <button onclick="loadDashboard()">
+                Refresh
+            </button>
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Registration</th>
+                    <th>Model</th>
+                    <th>Status</th>
+                    <th>Last Service</th>
+                </tr>
+            </thead>
+
+            <tbody id="vehicleTable"></tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
